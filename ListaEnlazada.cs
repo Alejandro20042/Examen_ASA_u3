@@ -90,6 +90,7 @@ namespace Examen_ASA
 
         public void OrdenarProductos()
         {
+           
             bool bandera = true;
 
             while (bandera)
@@ -100,18 +101,22 @@ namespace Examen_ASA
 
                 while (siguiente != null)
                 {
-                    if(actual.Dato.Precio < actual.Dato.Precio)
+                    if (actual.Dato.Precio > siguiente.Dato.Precio)
                     {
+                        Productos temp = actual.Dato;
+                        actual.Dato = siguiente.Dato;
+                        siguiente.Dato = temp;
 
+                        bandera = true;
                     }
 
+                    actual = siguiente;
+                    siguiente = siguiente.Siguiente;
                 }
-
-
-
             }
-
         }
+
     }
+    
 }
 

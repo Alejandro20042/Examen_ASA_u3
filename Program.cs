@@ -12,6 +12,7 @@
                 Console.WriteLine("1. Agregar Producto");
                 Console.WriteLine("2. Buscar Producto");
                 Console.WriteLine("3. Imprimir lista de Productos");
+                Console.WriteLine("4. Ordenar productos");
                 
                 int opcion = Convert.ToInt32(Console.ReadLine());
 
@@ -34,6 +35,10 @@
                         listaEnlazada.BuscarProductos(precioBuscado);
                         break;
                         case 3:
+                        listaEnlazada.ImprimirProductos();
+                        break;
+                        case 4:
+                        listaEnlazada.OrdenarProductos();
                         listaEnlazada.ImprimirProductos();
                         break;
 
